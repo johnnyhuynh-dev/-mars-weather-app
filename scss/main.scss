@@ -152,6 +152,7 @@ body {
         grid-row: span 1;
         border-left: none;
         justify-self: end;
+        overflow: hidden;
       }
     }
   }
@@ -270,6 +271,7 @@ body {
   width: 100%;
   background: var(--color-light);
   position: absolute;
+  left: 0;
   bottom: 0;
   transform: translateY(60%);
   transition: transform 500ms ease;
