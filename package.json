@@ -1,0 +1,24 @@
+{
+  "name": "mars-weather-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass":"node-sass -w scss/ -o css/ --recursive"
+
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/johnnyhuynh-dev/mars-weather-app.git"
+  },
+  "author": "johnny huynh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/johnnyhuynh-dev/mars-weather-app/issues"
+  },
+  "homepage": "https://github.com/johnnyhuynh-dev/mars-weather-app#readme",
+  "dependencies": {
+    "node-sass": "^4.14.1"
+  }
+}
