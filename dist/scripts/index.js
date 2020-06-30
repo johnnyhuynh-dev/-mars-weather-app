@@ -1,4 +1,5 @@
-const API_KEY = "9e9TS1YyD4nDK57LIVbaUe6lYeWlGKi9xdxnvVZC";
+import { config } from "./config.js";
+const API_KEY = config.APIKEY;
 const API_URL = `https://api.nasa.gov/insight_weather/?api_key=${API_KEY}&feedtype=json&ver=1.0`;
 
 // the weather toggle button and the previous weather dashboard container element
@@ -150,7 +151,7 @@ function getWeather() {
     .then((res) => res.json())
     .then((data) => {
       const { sol_keys, validity_checks, ...solData } = data;
-      return (temp = Object.entries(solData).map(([sol, data]) => {
+      return Object.entries(solData).map(([sol, data]) => {
         return {
           sol: sol,
           maxTemp: data.AT.mx,
@@ -160,7 +161,7 @@ function getWeather() {
           windDirectionCardinal: data.WD.most_common.compass_point,
           date: new Date(data.First_UTC),
         };
-      }));
+      });
     });
 }
 
